@@ -23,8 +23,8 @@ header{
   margin: 20px;
 }
 
-.logo{
-  border-radius: 10px;
+#imgLogo{
+  border-radius: 30px;
 }
 
 main{
@@ -44,16 +44,32 @@ padding: 20px;
 border-radius: 10px;
 }
 
+#cardOfertas{
+  display: flex;
+  justify-content:flex-start;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.card-img-top{
+  transition: transform .3s;
+  border-radius: 10px;
+}
+
+.card-img-top:hover{
+  transform: scale(1.1); 
+}/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
+
+
 footer{
-  /*position: absolute;*/
-  bottom: 0;
-  margin-left: 0;
   width: 100%;
+  text-align: center;
 }
 
 #foo{
   display: inline-flex;
-  
+  padding: 20px;
 }
 
 #foo li{
