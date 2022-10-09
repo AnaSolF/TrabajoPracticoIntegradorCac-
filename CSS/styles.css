@@ -1,0 +1,62 @@
+
+#imgLogo{
+  border-radius: 30px;
+}
+
+main img{
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+.carousel-inner {
+color: black;
+text-align: center;
+
+}
+h2 {
+  text-align: center;
+}
+
+p,h3 {
+  color: black;
+  font-size: xx-large; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p .Tachado {
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.col .card{
+  height: 500px;
+}
+
+.card img{
+  height: 348px;
+  object-fit: cover;
+}
+
+.card-img-top{
+  transition: transform .3s;
+  border-radius: 10px;
+}
+
+.card-img-top:hover{
+  transform: scale(1.01); 
+}/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
+
+
+footer{
+  width: 100%;
+  text-align: center;
+}
+
+#foo{
+  display: inline-flex;
+  padding: 20px;
+}
+
+#foo li{
+  list-style: none;
+  padding: 15px;
+}
