@@ -15,14 +15,6 @@ header{
   border-bottom: 1px solid black;
 }
 
-.box{
-  display: flex;
-  justify-content:space-around;
-  width: 100%;
-  align-items: center;
-  margin: 20px;
-}
-
 #imgLogo{
   border-radius: 30px;
 }
@@ -30,6 +22,18 @@ header{
 main{
 display: flex;
 width: 100%;
+}
+
+/* - Categorias sujeto a modificaciones . Inicio - */
+
+nav{
+  margin: 0 20px;
+  width: 100%;
+  justify-content: center !important;
+}
+
+.navbar-collapse{
+  justify-content: center;
 }
 
 .nav-active{
@@ -42,6 +46,24 @@ width: 100%;
   /* font-family: fantasy; */
   font-family: 'Fugaz One', cursive;
 }
+
+.navbar-toggler{
+  z-index: 20;
+}
+
+@media screen and (max-width: 992px){
+  #cart-desktop{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px){
+  #cart-mobile{
+    display: none;
+  }
+}
+
+/* - Categorias sujeto a modificaciones . Fin - */
 
 .carruseles{
 width: 100%;
