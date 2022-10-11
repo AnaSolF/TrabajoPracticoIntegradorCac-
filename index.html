@@ -1,188 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
-
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Home</title>
 </head>
+
 <body>
-    <header>
+  <header>
     <!--Enlaces de navegación-->
-
-        <nav class="navbar navbar-expand-lg">
-          
-          <div class="container-fluid">
-            <div class="logo"><!--Logo-->
-              <img  id="imgLogo" src="./Imagenes/Logo.jpeg" alt="logo" width="50px">
-            </div>
-
-            <div id="cart-mobile"><!--Carrito-->
-              <img src="./Imagenes/icon-cart.svg" alt="cart">
-            </div>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link nav-active" href="#">Inicio</a>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg bg-dark-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./Imagenes/Logo.jpeg" alt="logo" width="90px" class="img-responsive">
+        </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item dropdown" style="display: block;">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Todas</a></li>
+                <li>
+                  <hr class="dropdown-divider">
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Categorias
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Todas</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Big Burgers</a></li>
-                    <li><a class="dropdown-item" href="#">Little Burgers</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Vegetariana</a></li>
-                    <li><a class="dropdown-item" href="#">Vegana</a></li>
-                  </ul>
+                <li><a class="dropdown-item" href="#">Big Burgers</a></li>
+                <li><a class="dropdown-item" href="#">Little Burgers</a></li>
+                <li>
+                  <hr class="dropdown-divider">
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Como Llegar?</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Preguntas Frecuentes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contacto</a>
-                </li>
+                <li><a class="dropdown-item" href="#">Vegetariana</a></li>
+                <li><a class="dropdown-item" href="#">Vegana</a></li>
               </ul>
-            </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">&iquest;C&oacute;mo llegar?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-user"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-heart"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+    <!--Fin Menú hamburguesa-->
+  </header>
 
-            <div id="cart-desktop"><!--Carrito-->
-              <img src="./Imagenes/icon-cart.svg" alt="cart">
+  <main>
+    <!--Contenido principal-->
+
+    <div class="carruseles">
+      <!--Colocar aquí debajo el carrusel-->
+      <!--Carrusel-->
+      <!--Fin carrusel-->
+
+      <!--Cards Ofertas-->
+      <div id="cardOfertas">
+        <div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+          <div class="col">
+            <div class="card h-100">
+              <img src="./Imagenes/burger-2762371_640.jpg" class="card-img-top" alt="burger">
+              <div class="card-body">
+                Combo
+                <!--Agregar contenido al párrafo o quitarlo-->
+              </div>
+
             </div>
           </div>
-
-          
-        </nav>
-
-        <!--Fin Menú hamburguesa-->
-    </header>
-
-    <main><!--Contenido principal-->
-
-    <div class="carruseles"><!--Colocar aquí debajo el carrusel-->
-        <!--Carrusel-->
-        <!--Fin carrusel-->
-
-        <!--Cards Ofertas-->
-<div id="cardOfertas">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <img src="./Imagenes/burger-2762371_640.jpg" class="card-img-top" alt="burger">
-                <div class="card-body">
-                  Combo<!--Agregar contenido al párrafo o quitarlo-->
-                </div>
-            
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="./Imagenes/bowl-1842294_640.jpg" class="card-img-top" alt="Bowl">
-                <div class="card-body">
-                 <!--Agregar contenido al párrafo o quitarlo-->
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <img src="./Imagenes/hamburger-494706_640-min.jpg" class="card-img-top" alt="hamburger">
-                <div class="card-body">
-                  <!--Agregar contenido al párrafo o quitarlo-->
-                </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./Imagenes/bowl-1842294_640.jpg" class="card-img-top" alt="Bowl">
+              <div class="card-body">
+                <!--Agregar contenido al párrafo o quitarlo-->
               </div>
             </div>
           </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="./Imagenes/hamburger-494706_640-min.jpg" class="card-img-top" alt="hamburger">
+              <div class="card-body">
+                <!--Agregar contenido al párrafo o quitarlo-->
+              </div>
+            </div>
+          </div>
+        </div>
 
-        </div>         
-        <!--Fin Cards Ofertas -->
-
-    </main>
-
-    <footer><!--Comienzo footer-->
-      <div class="foot">
-        <ul class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Atencion al Cliente
-          </a>
-          <ul class="dropdown-menu">
-            <a class="dropdown-item" href="#"><li>Como comprar?</li></a>
-            <a class="dropdown-item" href="#"><li>Terminos y condiciones</li></a>
-            <a class="dropdown-item" href="#"><li>Preguntas Frecuentes</li></a>
-            <a class="dropdown-item" href="#"><li>Quienes Somos?</li></a>
-            <a class="dropdown-item" href="#"><li>Contactanos</li></a>
-            <a class="dropdown-item" href="#"><li>Reembolso y devoluciones</li></a>
-            <a class="dropdown-item" href="#"><li>Políticas de privacidad</li></a>
-            <a class="dropdown-item" href="#"><li>Políticas de envíos</li></a>
-          </ul>
-        </ul>
-        
-        <ul class="dropbox-footer">
-          <li><strong>Atencion al Cliente</strong></li>
-          <a href="#"><li>Como comprar?</li></a>
-          <a href="#"><li>Terminos y condiciones</li></a>
-          <a href="#"><li>Preguntas Frecuentes</li></a>
-          <a href="#"><li>Quienes Somos?</li></a>
-          <a href="#"><li>Contactanos</li></a>
-          <a href="#"><li>Reembolso y devoluciones</li></a>
-          <a href="#"><li>Políticas de privacidad</li></a>
-          <a href="#"><li>Políticas de envíos</li></a>
-        </ul>
       </div>
-      <div class="foot">
-        <ul class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle dropdown-toggle-text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Compra online
+      <!--Fin Cards Ofertas -->
+
+  </main>
+
+  <footer>
+    <!--Comienzo footer-->
+    <div class="foot">
+      <ul class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Atencion al Cliente
+        </a>
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <li>Como comprar?</li>
           </a>
-          <ul class="dropdown-menu">
-            <a class="dropdown-item" href="#"><li>Empresas</li></a>
-            <a class="dropdown-item" href="#"><li>Zonas de Envio</li></a>
-            <a class="dropdown-item" href="#"><li>Promociones Bancarias</li></a>
-          </ul>
+          <a class="dropdown-item" href="#">
+            <li>Terminos y condiciones</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Preguntas Frecuentes</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Quienes Somos?</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Contactanos</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Reembolso y devoluciones</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Políticas de privacidad</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Políticas de envíos</li>
+          </a>
         </ul>
+      </ul>
 
-        <ul class="dropbox-footer">
-          <li><strong>Compra online</strong></li>
-          <a href="#"><li>Empresas</li></a>
-          <a href="#"><li>Zonas de Envio</li></a>
-          <a href="#"><li>Promociones Bancarias</li></a>
+      <ul class="dropbox-footer">
+        <li><strong>Atencion al Cliente</strong></li>
+        <a href="#">
+          <li>Como comprar?</li>
+        </a>
+        <a href="#">
+          <li>Terminos y condiciones</li>
+        </a>
+        <a href="#">
+          <li>Preguntas Frecuentes</li>
+        </a>
+        <a href="#">
+          <li>Quienes Somos?</li>
+        </a>
+        <a href="#">
+          <li>Contactanos</li>
+        </a>
+        <a href="#">
+          <li>Reembolso y devoluciones</li>
+        </a>
+        <a href="#">
+          <li>Políticas de privacidad</li>
+        </a>
+        <a href="#">
+          <li>Políticas de envíos</li>
+        </a>
+      </ul>
+    </div>
+    <div class="foot">
+      <ul class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle dropdown-toggle-text" href="#" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Compra online
+        </a>
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <li>Empresas</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Zonas de Envio</li>
+          </a>
+          <a class="dropdown-item" href="#">
+            <li>Promociones Bancarias</li>
+          </a>
         </ul>
-      </div>
-      <div class="foot foot3">
-        <h5>Redes Sociales</h5>
-        <ul id="foo">
-          <li><img src="./Imagenes/facebook.png" alt="" width="30px"></li>
-          <li><img src="./Imagenes/gorjeo.png" alt=""width="30px"></li>
-          <li><img src="./Imagenes/instagram.png" alt=""width="35px"></li>
-          <li><img src="./Imagenes/correo-electronico.png" alt=""width="30px"></li>
-          <!-- <li>&#169 2022</li> -->
-        </ul>
+      </ul>
 
-        <address><i>
+      <ul class="dropbox-footer">
+        <li><strong>Compra online</strong></li>
+        <a href="#">
+          <li>Empresas</li>
+        </a>
+        <a href="#">
+          <li>Zonas de Envio</li>
+        </a>
+        <a href="#">
+          <li>Promociones Bancarias</li>
+        </a>
+      </ul>
+    </div>
+    <div class="foot foot3">
+      <h5>Redes Sociales</h5>
+      <ul id="foo">
+        <li><img src="./Imagenes/facebook.png" alt="" width="30px"></li>
+        <li><img src="./Imagenes/gorjeo.png" alt="" width="30px"></li>
+        <li><img src="./Imagenes/instagram.png" alt="" width="35px"></li>
+        <li><img src="./Imagenes/correo-electronico.png" alt="" width="30px"></li>
+        <!-- <li>&#169 2022</li> -->
+      </ul>
+
+      <address><i>
           Derechos Reservados Tasty Food<br>
           &#169.2022<br>
           Catamarca - Argentina
         </i></address>
-      </div>
-      
-      <!-- <div class="logo">
+    </div>
+
+    <!-- <div class="logo">
         <img  id="imgLogo" src="./Imagenes/Logo.jpeg" alt="logo" width="50px">
       </div>
 
@@ -193,9 +259,12 @@
             <li><img src="./Imagenes/correo-electronico.png" alt=""width="30px"></li>
             <li>&#169 2022</li>
         </ul> -->
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
 </body>
+
 </html>
