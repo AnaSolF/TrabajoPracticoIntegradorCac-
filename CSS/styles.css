@@ -15,14 +15,6 @@ header{
   border-bottom: 1px solid black;
 }
 
-.box{
-  display: flex;
-  justify-content:space-around;
-  width: 100%;
-  align-items: center;
-  margin: 20px;
-}
-
 #imgLogo{
   border-radius: 30px;
 }
@@ -31,6 +23,68 @@ main{
 display: flex;
 width: 100%;
 }
+
+/* - Categorias sujeto a modificaciones . Inicio - */
+
+nav{
+  margin: 0 20px;
+  width: 100%;
+  justify-content: center !important;
+}
+
+.navbar-collapse{
+  justify-content: center;
+}
+
+.nav-active{
+  color: black !important;
+  text-shadow: 0px 0px 3px rgb(252, 103, 105);
+}
+
+.nav-link{
+  /* font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;  */
+  /* font-family: fantasy; */
+  font-family: 'Fugaz One', cursive;
+}
+
+.navbar-toggler{
+  z-index: 20;
+}
+
+@media screen and (max-width: 991px){
+  #cart-desktop, .dropbox-footer{
+    display: none;
+  }
+  
+  .foot{
+    width: 100%;
+  }
+
+  footer{
+    flex-direction: column;
+  };
+}
+
+@media screen and (min-width: 992px){
+  #cart-mobile{
+    display: none;
+  }
+
+  .foot{
+    width: 20%;
+    height: 300px;
+  }
+
+  .dropdown{
+    display: none;
+  }
+
+  address{
+    margin-top: 30%;
+  }
+}
+
+/* - Categorias sujeto a modificaciones . Fin - */
 
 .carruseles{
 width: 100%;
@@ -47,8 +101,9 @@ border-radius: 10px;
 #cardOfertas{
   display: flex;
   justify-content:flex-start;
-  margin: 10px 10px 10px 10px;
-  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 .card-img-top{
@@ -60,13 +115,60 @@ border-radius: 10px;
   transform: scale(1.1); 
 }/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
 
+/* - footer - */
 
 footer{
+  background: rgb(252, 103, 105);
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
   text-align: center;
 }
 
-#foo{
+.foot{ 
+  padding-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.foot ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.foot ul li{
+  text-align: start;
+}
+
+.foot ul a{
+  text-decoration: none;
+  color: rgb(63, 59, 59);
+}
+
+.foot ul a:hover{
+  color: white;
+}
+
+.foot ul a:active{
+  color: blue;
+}
+
+.foot3{
+  padding: 25px;
+  text-align: start;
+}
+
+.foot3 ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.foot3 ul li{
+  margin: 10px;
+  float: left;
+}
+
+/* #foo{
   display: inline-flex;
   padding: 20px;
 }
@@ -74,4 +176,4 @@ footer{
 #foo li{
   list-style: none;
   padding: 15px;
-}
+} */
