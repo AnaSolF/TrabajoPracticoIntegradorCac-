@@ -1,43 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;  
-}
-
-body{
-  margin: 0;
-  padding: 0;
-}
-
-header{
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid black;
-}
-
 #imgLogo{
   border-radius: 30px;
 }
 
-main{
-display: flex;
-width: 100%;
-}
-
-/* - Categorias sujeto a modificaciones . Inicio - */
-
 nav{
-  margin: 0 20px;
-  width: 100%;
-  justify-content: center !important;
+  border-bottom: 4px solid black;
+  margin-bottom: 10px;
 }
 
 .navbar-collapse{
   justify-content: center;
 }
 
-.nav-active{
-  color: black !important;
+li .nav-active{
+  color: black;
   text-shadow: 0px 0px 3px rgb(252, 103, 105);
 }
 
@@ -51,59 +26,46 @@ nav{
   z-index: 20;
 }
 
-@media screen and (max-width: 991px){
-  #cart-desktop, .dropbox-footer{
-    display: none;
-  }
-  
-  .foot{
-    width: 100%;
-  }
-
-  footer{
-    flex-direction: column;
-  };
+li .cart-desktop{
+  text-align: right;
 }
 
-@media screen and (min-width: 992px){
-  #cart-mobile{
-    display: none;
-  }
-
-  .foot{
-    width: 20%;
-    height: 300px;
-  }
-
-  .dropdown{
-    display: none;
-  }
-
-  address{
-    margin-top: 30%;
-  }
+main img{
+  max-height: 50vh;
+  object-fit: cover;
 }
 
-/* - Categorias sujeto a modificaciones . Fin - */
+.carousel-inner {
+color: black;
+text-align: center;
 
-.carruseles{
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
+}
+h2 {
+  text-align: center;
 }
 
-#carouselExampleCaptions{
-padding: 20px;
-border-radius: 10px;
+p,h3 {
+  color: black;
+  font-size: xx-large; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#cardOfertas{
-  display: flex;
-  justify-content:flex-start;
+p .Tachado {
+  text-decoration: line-through;
   margin-left: 10px;
-  margin-right: 10px;
+}
+
+.cards{
   margin-top: 10px;
+}
+
+.col .card{
+  height: 500px;
+}
+
+.card img{
+  height: 348px;
+  object-fit: cover;
 }
 
 .card-img-top{
@@ -112,17 +74,17 @@ border-radius: 10px;
 }
 
 .card-img-top:hover{
-  transform: scale(1.1); 
+  transform: scale(1.01); 
 }/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
-
-/* - footer - */
 
 footer{
   background: rgb(252, 103, 105);
-  display: flex;
+  display: wrap;
   justify-content: space-evenly;
   width: 100%;
   text-align: center;
+  margin-top: 10px;
+  padding-bottom: 20px;
 }
 
 .foot{ 
@@ -168,12 +130,8 @@ footer{
   float: left;
 }
 
-/* #foo{
-  display: inline-flex;
-  padding: 20px;
+@media screen and (min-width: 500px){
+  footer{
+    display: flex;
+  }
 }
-
-#foo li{
-  list-style: none;
-  padding: 15px;
-} */
