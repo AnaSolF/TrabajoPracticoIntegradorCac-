@@ -168,12 +168,30 @@ footer{
   float: left;
 }
 
-/* #foo{
-  display: inline-flex;
-  padding: 20px;
+@media screen and (min-width: 500px){
+  footer{
+    display: flex;
+  }
+}
+main
+
+#compra{
+display: flex;
+border: 2px, solid, red;
+width: 1000px;
+height: 700px;
 }
 
-#foo li{
-  list-style: none;
-  padding: 15px;
-} */
+#ofertas{
+  display: flex;
+  flex-direction: column;
+  border: 2px, solid, black;
+}
+
+#recomendados{
+  border: 2px, solid, green;
+}
+
+#menuDelDia{
+  border: 2px, solid, blue;
+}
