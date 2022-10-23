@@ -28,18 +28,18 @@ main {
 
 /* - Categorias sujeto a modificaciones . Inicio - */
 /* 
+
 nav{
-  margin: 0 20px;
-  width: 100%;
-  justify-content: center !important;
+  border-bottom: 4px solid black;
+  margin-bottom: 10px;
 }
 
 .navbar-collapse{
   justify-content: center;
 }
 
-.nav-active{
-  color: black !important;
+li .nav-active{
+  color: black;
   text-shadow: 0px 0px 3px rgb(252, 103, 105);
 } */
 
@@ -90,7 +90,10 @@ nav{
   }
 }
 
-/* - Categorias sujeto a modificaciones . Fin - */
+p .Tachado {
+  text-decoration: line-through;
+  margin-left: 10px;
+}
 
 .carruseles {
   width: 100%;
@@ -110,12 +113,6 @@ nav{
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
-}
-
-.card-img-top {
-  transition: transform .3s;
-  border-radius: 10px;
-}
 
 .card-img-top:hover {
   transform: scale(1.1);
@@ -127,10 +124,12 @@ nav{
 
 footer {
   background: rgb(252, 103, 105);
-  display: flex;
+  display: wrap;
   justify-content: space-evenly;
   width: 100%;
   text-align: center;
+  margin-top: 10px;
+  padding-bottom: 20px;
 }
 
 .foot {
@@ -176,9 +175,10 @@ footer {
   float: left;
 }
 
-/* #foo{
-  display: inline-flex;
-  padding: 20px;
+@media screen and (min-width: 500px){
+  footer{
+    display: flex;
+  }
 }
 
 #foo li{
