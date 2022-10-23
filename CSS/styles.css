@@ -1,169 +1,176 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;  
-}
-
-body{
-  margin: 0;
   padding: 0;
 }
 
-header{
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* SCROLL HORIZONTAL */
+}
+
+/* header{
   display: flex;
   width: 100%;
   border-bottom: 1px solid black;
-}
+} */
 
-#imgLogo{
+#imgLogo {
   border-radius: 30px;
 }
 
-main{
-display: flex;
-width: 100%;
+main {
+  display: flex;
+  width: 100%;
 }
 
 /* - Categorias sujeto a modificaciones . Inicio - */
+/* 
 
 nav{
-  margin: 0 20px;
-  width: 100%;
-  justify-content: center !important;
+  border-bottom: 4px solid black;
+  margin-bottom: 10px;
 }
 
 .navbar-collapse{
   justify-content: center;
 }
 
-.nav-active{
-  color: black !important;
+li .nav-active{
+  color: black;
   text-shadow: 0px 0px 3px rgb(252, 103, 105);
-}
+} */
 
-.nav-link{
+.nav-link {
   /* font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;  */
   /* font-family: fantasy; */
-  font-family: 'Fugaz One', cursive;
+  /* font-family: 'Fugaz One', cursive; */
 }
 
-.navbar-toggler{
+/* .navbar-toggler {
   z-index: 20;
-}
+} */
 
-@media screen and (max-width: 991px){
-  #cart-desktop, .dropbox-footer{
+@media screen and (max-width: 991px) {
+
+  #cart-desktop,
+  .dropbox-footer {
     display: none;
   }
-  
-  .foot{
+
+  .foot {
     width: 100%;
   }
 
-  footer{
+  footer {
     flex-direction: column;
-  };
+  }
+
+  ;
 }
 
-@media screen and (min-width: 992px){
-  #cart-mobile{
+@media screen and (min-width: 992px) {
+  #cart-mobile {
     display: none;
   }
 
-  .foot{
+  .foot {
     width: 20%;
     height: 300px;
   }
 
-  .dropdown{
+  .dropdown {
     display: none;
   }
 
-  address{
+  address {
     margin-top: 30%;
   }
 }
 
-/* - Categorias sujeto a modificaciones . Fin - */
-
-.carruseles{
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-#carouselExampleCaptions{
-padding: 20px;
-border-radius: 10px;
-}
-
-#cardOfertas{
-  display: flex;
-  justify-content:flex-start;
+p .Tachado {
+  text-decoration: line-through;
   margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
 }
 
-.card-img-top{
-  transition: transform .3s;
+.carruseles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#carouselExampleCaptions {
+  padding: 20px;
   border-radius: 10px;
 }
 
-.card-img-top:hover{
-  transform: scale(1.1); 
-}/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
+#cardOfertas {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}
+
+/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
 
 /* - footer - */
 
-footer{
+footer {
   background: rgb(252, 103, 105);
-  display: flex;
+  display: wrap;
   justify-content: space-evenly;
   width: 100%;
   text-align: center;
+  margin-top: 10px;
+  padding-bottom: 20px;
 }
 
-.foot{ 
+.foot {
   padding-top: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.foot ul{
+.foot ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.foot ul li{
+.foot ul li {
   text-align: start;
 }
 
-.foot ul a{
+.foot ul a {
   text-decoration: none;
   color: rgb(63, 59, 59);
 }
 
-.foot ul a:hover{
+.foot ul a:hover {
   color: white;
 }
 
-.foot ul a:active{
+.foot ul a:active {
   color: blue;
 }
 
-.foot3{
+.foot3 {
   padding: 25px;
   text-align: start;
 }
 
-.foot3 ul{
+.foot3 ul {
   display: flex;
   justify-content: space-evenly;
 }
 
-.foot3 ul li{
+.foot3 ul li {
   margin: 10px;
   float: left;
 }
@@ -190,6 +197,40 @@ height: 700px;
 
 #recomendados{
   border: 2px, solid, green;
+}
+
+/* NAVBAR ERIKA */
+.navbar {
+  border-bottom: 2px solid #f86462;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.bg-dark-custom {
+  background-color: #100f0d !important;
+}
+
+.fa {
+  font-size: 22px;
+}
+
+.fa.fa-user {
+  color: #FFF;
+}
+
+.fa.fa-heart {
+  color: #fc6769;
+}
+
+.fa.fa-shopping-cart {
+  color: #FFF;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show>.nav-link {
+  border-bottom: 4px solid #beab35;
 }
 
 #menuDelDia{
