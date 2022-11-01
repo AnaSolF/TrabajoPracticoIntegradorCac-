@@ -22,24 +22,21 @@ body {
 }
 
 main {
-  display: flex;
   width: 100%;
 }
 
 /* - Categorias sujeto a modificaciones . Inicio - */
 /* 
-
 nav{
-  border-bottom: 4px solid black;
-  margin-bottom: 10px;
+  margin: 0 20px;
+  width: 100%;
+  justify-content: center !important;
 }
-
 .navbar-collapse{
   justify-content: center;
 }
-
-li .nav-active{
-  color: black;
+.nav-active{
+  color: black !important;
   text-shadow: 0px 0px 3px rgb(252, 103, 105);
 } */
 
@@ -90,33 +87,49 @@ li .nav-active{
   }
 }
 
+/* - Categorias sujeto a modificaciones . Fin - */
+
+main img{
+  max-height: 50vh;
+  object-fit: cover;
+}
+
+.carousel-inner {
+color: black;
+text-align: center;
+
+}
+h2 {
+  text-align: center;
+}
+
+p,h3 {
+  color: black;
+  font-size: xx-large; 
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 p .Tachado {
   text-decoration: line-through;
   margin-left: 10px;
 }
-
-.carruseles {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.col .card{
+  height: 500px;
 }
 
-#carouselExampleCaptions {
-  padding: 20px;
+.card img{
+  height: 348px;
+  object-fit: cover;
+}
+
+.card-img-top{
+  transition: transform .3s;
   border-radius: 10px;
 }
 
-#cardOfertas {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-
-.card-img-top:hover {
-  transform: scale(1.1);
-}
+.card-img-top:hover{
+  transform: scale(1.01); 
+}/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
 
 /*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
 
@@ -124,12 +137,10 @@ p .Tachado {
 
 footer {
   background: rgb(252, 103, 105);
-  display: wrap;
+  display: flex;
   justify-content: space-evenly;
   width: 100%;
   text-align: center;
-  margin-top: 10px;
-  padding-bottom: 20px;
 }
 
 .foot {
@@ -175,29 +186,14 @@ footer {
   float: left;
 }
 
-@media screen and (min-width: 500px){
-  footer{
-    display: flex;
-  }
+/* #foo{
+  display: inline-flex;
+  padding: 20px;
 }
-main
-
-#compra{
-display: flex;
-border: 2px, solid, red;
-width: 1000px;
-height: 700px;
-}
-
-#ofertas{
-  display: flex;
-  flex-direction: column;
-  border: 2px, solid, black;
-}
-
-#recomendados{
-  border: 2px, solid, green;
-}
+#foo li{
+  list-style: none;
+  padding: 15px;
+} */
 
 /* NAVBAR ERIKA */
 .navbar {
@@ -231,8 +227,4 @@ height: 700px;
 .navbar-nav .nav-link.active,
 .navbar-nav .show>.nav-link {
   border-bottom: 4px solid #beab35;
-}
-
-#menuDelDia{
-  border: 2px, solid, blue;
 }
