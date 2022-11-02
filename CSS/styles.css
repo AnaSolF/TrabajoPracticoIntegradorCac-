@@ -7,23 +7,14 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  
   /* SCROLL HORIZONTAL */
 }
-
-/* header{
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid black;
-} */
 
 #imgLogo {
   border-radius: 30px;
 }
 
-main {
-  width: 100%;
-}
 
 /* - Categorias sujeto a modificaciones . Inicio - */
 /* 
@@ -40,11 +31,11 @@ nav{
   text-shadow: 0px 0px 3px rgb(252, 103, 105);
 } */
 
-.nav-link {
-  /* font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;  */
-  /* font-family: fantasy; */
-  /* font-family: 'Fugaz One', cursive; */
-}
+/*.nav-link {
+   font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;  
+   font-family: fantasy; 
+   font-family: 'Fugaz One', cursive; 
+}*/
 
 /* .navbar-toggler {
   z-index: 20;
@@ -63,9 +54,7 @@ nav{
 
   footer {
     flex-direction: column;
-  }
-
-  ;
+  };
 }
 
 @media screen and (min-width: 992px) {
@@ -89,10 +78,10 @@ nav{
 
 /* - Categorias sujeto a modificaciones . Fin - */
 
-main img{
+/*main img{
   max-height: 50vh;
   object-fit: cover;
-}
+}*/
 
 .carousel-inner {
 color: black;
@@ -101,6 +90,9 @@ text-align: center;
 }
 h2 {
   text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-left: 50px;
 }
 
 p,h3 {
@@ -113,25 +105,7 @@ p .Tachado {
   text-decoration: line-through;
   margin-left: 10px;
 }
-.col .card{
-  height: 500px;
-}
 
-.card img{
-  height: 348px;
-  object-fit: cover;
-}
-
-.card-img-top{
-  transition: transform .3s;
-  border-radius: 10px;
-}
-
-.card-img-top:hover{
-  transform: scale(1.01); 
-}/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
-
-/*Agrego efecto css de aumento de la imagen al pasar el mouse, ver si les gusta*/
 
 /* - footer - */
 
@@ -227,4 +201,98 @@ footer {
 .navbar-nav .nav-link.active,
 .navbar-nav .show>.nav-link {
   border-bottom: 4px solid #beab35;
+}
+
+#products{
+border-style: none;
+flex-flow: row wrap;
+width: 100%;
+margin-left: 12%;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  margin-top: 10px; 
+}
+
+#carrito{
+  margin-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-flow: wrap;
+  /*margin-left: 50px;*/
+  justify-content:space-around;
+}
+
+.card-body{
+width: 300px;
+border-style: none;
+}
+
+.card img{
+  object-fit: cover;
+}
+
+.card-text{
+  font-size: 16px;
+  text-align: center;
+}
+
+#mediosPago{
+ width: 80%;
+ margin-left: 10%;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.img-thumbnail{
+  width: 300px;
+  height: 200px;
+}
+
+h4{
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+
+input{
+  margin-bottom: 5px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+#MostrarTotal{
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#btnComprar,
+#btnVaciar{
+  margin-left: 8%;
+  width: 20%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+#formulario{
+display: flex;
+flex-direction: column;
+}
+
+#PrecioTotal{
+  background-color: white;
+  border-style: none;
+}
+
+#botones{
+  display: flex;
+
 }
