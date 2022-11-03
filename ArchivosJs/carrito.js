@@ -127,9 +127,9 @@ const generarCards = (productos) => {
         //Calcular precio por cantidad ingresada.
         productCard = document.getElementById("Cantidad" + producto.id);
 
-        debugger
+       
         productCard.addEventListener("click", (evento) => {
-            debugger
+            
             evento.preventDefault(); 
 
             let cantidadProd
