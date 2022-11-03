@@ -16,8 +16,9 @@ function vacio() {
 
         alert("Agregue productos al carrito")
     } else {
-        alert("Compra exitosa");
+        alert("Compra exitosa!");
     }
+    vaciarCarrito()
     btnComprar.disabled = true;
     btnVaciar.disabled = true;
 }
@@ -86,7 +87,7 @@ const generarCards = (productos) => {
             <div class="form-control" placeholder="Leave a comment here" id="floatingTextarea">
             <label for="floatingTextarea" id="PrecioCantidad${producto.id}"><b>$</b></label>
             </p></div>
-            <a class="btn btn-warning" id="Cantidad${producto.id}">Agregar</a> <!--agregar btn agregar-->
+            <a class="btn btn-warning" id="Cantidad${producto.id}">Añadir</a> <!--agregar btn agregar-->
             <a class="btn btn-success" id="cart${producto.id}">Eliminar</a>
             </div>
             </div>
