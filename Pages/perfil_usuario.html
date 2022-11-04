@@ -21,7 +21,7 @@
 
 <body>
   <header>
-    <!--NAVBAR-->
+    <!--Enlaces de navegación-->
     <nav class="navbar navbar-expand-lg navbar-dark shadow-lg bg-dark-custom">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item dropdown" style="display: block;">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -71,7 +71,7 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link" href="#">
                   <i class="fa fa-user"></i>
                 </a>
               </li>
@@ -89,16 +89,16 @@
           </div>
         </div>
       </div>
-      </div>
     </nav>
+    <!--Fin Menú hamburguesa-->
   </header>
 
-  <div class="container mt-5">
+  <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-sm-3">
         <!-- IMAGEN USUARIO -->
         <div class="text-center  mb-2 imagen_usuario">
-          <i class="fa fa-user fa-5x"></i>
+          <i class="fa fa-user fa-3x"></i>
         </div>
         <!-- NOMBRE USUARIO -->
         <div class="text-center mt-3 mb-3">
@@ -106,343 +106,296 @@
         </div>
         <!-- LISTA DE OPCIONES -->
         <ul class="list-group border-gradient menu_usuario">
-          <li class="list-group-item text-right"><a href="#">Perfil</a></li>
-          <li class="list-group-item text-right"><a href="#">Direcciones</a></li>
-          <li class="list-group-item text-right"><a href="#">Pedidos</a></li>
-          <li class="list-group-item text-right"><a href="#">Comprobantes</a></li>
-          <!--           <li class="list-group-item text-right"><span class="pull-left"><strong>Favoritos</strong></span> <i class="fa fa-heart"></i></li> -->
-          <li class="list-group-item text-right"><a href="#">Favoritos</a></li>
-          <li class="list-group-item text-right"><span class="pull-left"><strong><a href="#">Cerrar
-                  sesi&oacute;n</a></strong></span>
+          <li class="list-group-item text-right active" id="li-perfil-tab"><a href="#/"
+              onclick="change_Tab('perfil-tab')">Perfil</a></li>
+          <li class="list-group-item text-right" id="li-direcciones-tab"><a href="#/"
+              onclick="change_Tab('direcciones-tab')">Direcciones</a>
+          </li>
+          <li class="list-group-item text-right" id="li-pedidos-tab"><a href="#/"
+              onclick="change_Tab('pedidos-tab')">Pedidos</a></li>
+          <li class="list-group-item text-right" id="li-favoritos-tab"><a href="#/"
+              onclick="change_Tab('favoritos-tab')">Favoritos</a></li>
+          <li class="list-group-item text-right" id="li-password-tab"><a href="#/"
+              onclick="change_Tab('password-tab')">Cambiar
+              contrase&ntilde;a</a></li>
+          <li class="list-group-item text-right">
+            <span class="pull-left">
+              <strong>
+                <a href="#">
+                  Cerrar
+                  sesi&oacute;n
+                </a>
+              </strong>
+            </span>
           </li>
         </ul>
 
       </div>
       <!--/col-3-->
       <div class="col-sm-9">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Perfil</a>
+        <!-- LISTA DE OPCIONES -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="perfil-tab" data-bs-toggle="tab" data-bs-target="#perfil-tab-pane"
+              type="button" role="tab" aria-controls="perfil-tab-pane" aria-selected="true">Perfil</button>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Direcciones</a>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="direcciones-tab" data-bs-toggle="tab" data-bs-target="#direcciones-tab-pane"
+              type="button" role="tab" aria-controls="direcciones-tab-pane" aria-selected="false">Direcciones</button>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pedidos</a>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pedidos-tab" data-bs-toggle="tab" data-bs-target="#pedidos-tab-pane"
+              type="button" role="tab" aria-controls="pedidos-tab-pane" aria-selected="false">Pedidos</button>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Comprobantes</a>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="favoritos-tab" data-bs-toggle="tab" data-bs-target="#favoritos-tab-pane"
+              type="button" role="tab" aria-controls="pedidos-tab-pane" aria-selected="false">Favoritos</button>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Favoritos</a>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="password-tab" data-bs-toggle="tab" data-bs-target="#password-tab-pane"
+              type="button" role="tab" aria-controls="password-tab-pane" aria-selected="false">Cambiar
+              contrase&ntilde;a</button>
           </li>
         </ul>
-
-
-        <div class="tab-content">
-          <div class="tab-pane active" id="home">
-            <hr>
-            <form class="form" action="##" method="post" id="registrationForm">
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="first_name">
-                    <h4>First name</h4>
-                  </label>
-                  <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name"
-                    title="enter your first name if any.">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="perfil-tab-pane" role="tabpanel" aria-labelledby="perfil-tab"
+            tabindex="0">
+            <!-- PERFIL -->
+            <form class="form mt-4" action="##" method="post" id="form_perfil">
+              <!-- APELLIDO + NOMBRE -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nombre_usuario">
+                      Nombre*
+                    </label>
+                    <input type="text" class="form-control" name="nombre_usuario" id="nombre_usuario" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="apellido_usuario">
+                      Apellido*
+                    </label>
+                    <input type="text" class="form-control" name="apellido_usuario" id="apellido_usuario"
+                      placeholder="">
+                  </div>
                 </div>
               </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="last_name">
-                    <h4>Last name</h4>
-                  </label>
-                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name"
-                    title="enter your last name if any.">
+              <!-- DNI + GENERO -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="dni_usuario">
+                      DNI*
+                    </label>
+                    <input type="text" class="form-control" name="dni_usuario" id="dni_usuario" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="genero_usuario">
+                      G&eacute;nero*
+                    </label>
+                    <select name="genero_usuario" id="genero_usuario" class="form-control">
+                      <option value=""></option>
+                      <option value="F">Femenino</option>
+                      <option value="M">Masculino</option>
+                      <option value="X">No Binario</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- DATOS DE CONTACTO -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="telefono_usuario">
+                      Tel&eacute;fono*
+                    </label>
+                    <input type="tel" class="form-control" name="telefono_usuario" id="telefono_usuario" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email_usuario">
+                      Email*
+                    </label>
+                    <input type="email" class="form-control" name="email_usuario" id="email_usuario" placeholder="">
+                  </div>
                 </div>
               </div>
 
               <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="phone">
-                    <h4>Phone</h4>
-                  </label>
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone"
-                    title="enter your phone number if any.">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="col-xs-6">
-                  <label for="mobile">
-                    <h4>Mobile</h4>
-                  </label>
-                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number"
-                    title="enter your mobile number if any.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="email">
-                    <h4>Email</h4>
-                  </label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com"
-                    title="enter your email.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="email">
-                    <h4>Location</h4>
-                  </label>
-                  <input type="email" class="form-control" id="location" placeholder="somewhere"
-                    title="enter a location">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="password">
-                    <h4>Password</h4>
-                  </label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="password"
-                    title="enter your password.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="password2">
-                    <h4>Verify</h4>
-                  </label>
-                  <input type="password" class="form-control" name="password2" id="password2" placeholder="password2"
-                    title="enter your password2.">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-xs-12">
-                  <br>
-                  <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>
-                    Save</button>
-                  <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <button class="btn btn-md btn-success" type="submit">
+                    <i class="fa fa-check"></i>
+                    Guardar cambios
+                  </button>
                 </div>
               </div>
             </form>
-
             <hr>
-
           </div>
-          <!--/tab-pane-->
-          <div class="tab-pane" id="messages">
-
-            <h2></h2>
-
-            <hr>
-            <form class="form" action="##" method="post" id="registrationForm">
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="first_name">
-                    <h4>First name</h4>
-                  </label>
-                  <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name"
-                    title="enter your first name if any.">
+          <div class="tab-pane fade" id="direcciones-tab-pane" role="tabpanel" aria-labelledby="direcciones-tab"
+            tabindex="0">
+            <!-- DIRECCIONES -->
+            <form class="form mt-4" action="##" method="post" id="form_direcciones">
+              <!-- PROVINCIA + LOCALIDAD -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="provincia_usuario">
+                      Provincia*
+                    </label>
+                    <input type="text" class="form-control" name="provincia_usuario" id="provincia_usuario"
+                      placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="localidad_usuario">
+                      Localidad*
+                    </label>
+                    <input type="text" class="form-control" name="localidad_usuario" id="localidad_usuario"
+                      placeholder="">
+                  </div>
+                </div>
+              </div>
+              <!-- BARRIO + CALLE -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="barrio_usuario">
+                      Barrio
+                    </label>
+                    <input type="text" class="form-control" name="barrio_usuario" id="barrio_usuario" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="calle_usuario">
+                      Calle*
+                    </label>
+                    <input type="text" class="form-control" name="calle_usuario" id="calle_usuario" placeholder="">
+                  </div>
+                </div>
+              </div>
+              <!-- NRO + DEPARTAMENTO -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="numero_usuario">
+                      N&uacute;mero
+                    </label>
+                    <input type="text" class="form-control" name="numero_usuario" id="numero_usuario" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="departamento_usuario">
+                      Departamento
+                    </label>
+                    <input type="text" class="form-control" name="departamento_usuario" id="departamento_usuario"
+                      placeholder="">
+                  </div>
                 </div>
               </div>
               <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="last_name">
-                    <h4>Last name</h4>
-                  </label>
-                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name"
-                    title="enter your last name if any.">
-                </div>
-              </div>
-
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="phone">
-                    <h4>Phone</h4>
-                  </label>
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone"
-                    title="enter your phone number if any.">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="col-xs-6">
-                  <label for="mobile">
-                    <h4>Mobile</h4>
-                  </label>
-                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number"
-                    title="enter your mobile number if any.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="email">
-                    <h4>Email</h4>
-                  </label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com"
-                    title="enter your email.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="email">
-                    <h4>Location</h4>
-                  </label>
-                  <input type="email" class="form-control" id="location" placeholder="somewhere"
-                    title="enter a location">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="password">
-                    <h4>Password</h4>
-                  </label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="password"
-                    title="enter your password.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="password2">
-                    <h4>Verify</h4>
-                  </label>
-                  <input type="password" class="form-control" name="password2" id="password2" placeholder="password2"
-                    title="enter your password2.">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-xs-12">
-                  <br>
-                  <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i>
-                    Save</button>
-                  <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <button class="btn btn-md btn-success" type="submit">
+                    <i class="fa fa-check"></i>
+                    Guardar cambios
+                  </button>
                 </div>
               </div>
             </form>
-
-          </div>
-          <!--/tab-pane-->
-          <div class="tab-pane" id="settings">
-
-
             <hr>
-            <form class="form" action="##" method="post" id="registrationForm">
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="first_name">
-                    <h4>First name</h4>
+          </div>
+          <div class="tab-pane fade" id="pedidos-tab-pane" role="tabpanel" aria-labelledby="pedidos-tab" tabindex="0">
+            <div class="card mt-4">
+              <div class="card-header">
+                Fecha del pedido: 04/11/2022 10:20
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Total $450</h5>
+                <p class="card-text">Nro de pedido #455655</p>
+                <div class="alert alert-success" role="alert">
+                  Entregado
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4">
+              <div class="card-header">
+                Fecha del pedido: 06/10/2022 10:50
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Total $400</h5>
+                <p class="card-text">Nro de pedido #455645</p>
+                <div class="alert alert-success" role="alert">
+                  Entregado
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4">
+              <div class="card-header">
+                Fecha del pedido: 04/10/2022 13:00
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Total $950</h5>
+                <p class="card-text">Nro de pedido #455665</p>
+                <div class="alert alert-success" role="alert">
+                  Entregado
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="password-tab-pane" role="tabpanel" aria-labelledby="password-tab" tabindex="0">
+            <!-- CAMBIAR PASSWORD -->
+            <form class="form mt-4" action="##" method="post" id="form_password">
+              <!-- PASSWORD ANTERIOR -->
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
+                  <label for="password_usuario">
+                    Contrase&ntilde;a actual*
                   </label>
-                  <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name"
-                    title="enter your first name if any.">
+                  <input type="text" class="form-control" name="password_usuario" id="password_usuario" placeholder="">
+                </div>
+              </div>
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
+                  <label for="password_nueva_usuario">
+                    Contrase&ntilde;a nueva*
+                  </label>
+                  <input type="text" class="form-control" name="password_nueva_usuario" id="password_nueva_usuario"
+                    placeholder="">
+                </div>
+              </div>
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
+                  <label for="password_nueva_confir_usuario">
+                    Repetir contrase&ntilde;a*
+                  </label>
+                  <input type="text" class="form-control" name="password_nueva_confir_usuario"
+                    id="password_nueva_confir_usuario" placeholder="">
                 </div>
               </div>
               <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="last_name">
-                    <h4>Last name</h4>
-                  </label>
-                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name"
-                    title="enter your last name if any.">
-                </div>
-              </div>
-
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="phone">
-                    <h4>Phone</h4>
-                  </label>
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone"
-                    title="enter your phone number if any.">
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class="col-xs-6">
-                  <label for="mobile">
-                    <h4>Mobile</h4>
-                  </label>
-                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number"
-                    title="enter your mobile number if any.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="email">
-                    <h4>Email</h4>
-                  </label>
-                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com"
-                    title="enter your email.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="email">
-                    <h4>Location</h4>
-                  </label>
-                  <input type="email" class="form-control" id="location" placeholder="somewhere"
-                    title="enter a location">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="password">
-                    <h4>Password</h4>
-                  </label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="password"
-                    title="enter your password.">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <div class="col-xs-6">
-                  <label for="password2">
-                    <h4>Verify</h4>
-                  </label>
-                  <input type="password" class="form-control" name="password2" id="password2" placeholder="password2"
-                    title="enter your password2.">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-xs-12">
-                  <br>
-                  <button class="btn btn-lg btn-success pull-right" type="submit"><i
-                      class="glyphicon glyphicon-ok-sign"></i> Save</button>
-                  <!--<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>-->
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <button class="btn btn-md btn-success" type="submit">
+                    <i class="fa fa-check"></i>
+                    Guardar cambios
+                  </button>
                 </div>
               </div>
             </form>
           </div>
-
         </div>
-        <!--/tab-pane-->
       </div>
-      <!--/tab-content-->
 
     </div>
-    <!--/col-9-->
+
   </div>
-  <!--/row-->
 
   <!-- FOOTER -->
   <footer>
@@ -549,11 +502,13 @@
         <!-- <li>&#169 2022</li> -->
       </ul>
 
-      <address><i>
+      <address>
+        <i>
           Derechos Reservados Tasty Food<br>
           &#169.2022<br>
           Catamarca - Argentina
-        </i></address>
+        </i>
+      </address>
     </div>
   </footer>
   <!-- SECCION SCRIPTS -->
