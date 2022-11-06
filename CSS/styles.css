@@ -78,10 +78,6 @@ nav{
 
 /* - Categorias sujeto a modificaciones . Fin - */
 
-/*main img{
-  max-height: 50vh;
-  object-fit: cover;
-}*/
 
 .carousel-inner {
 color: black;
@@ -207,7 +203,11 @@ footer {
 border-style: none;
 flex-flow: row wrap;
 width: 100%;
+<<<<<<< Updated upstream
 justify-content: center;
+=======
+justify-content: space-around;
+>>>>>>> Stashed changes
 }
 
 img{
@@ -226,8 +226,9 @@ img{
 }
 
 .card-body{
-width: 300px;
 border-style: none;
+font-weight:600;
+padding-bottom: 10px;
 }
 
 .card img{
@@ -294,5 +295,4 @@ flex-direction: column;
 
 #botones{
   display: flex;
-
 }
