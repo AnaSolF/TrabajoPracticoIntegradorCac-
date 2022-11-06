@@ -207,7 +207,7 @@ footer {
 border-style: none;
 flex-flow: row wrap;
 width: 100%;
-margin-left: 12%;
+justify-content: center;
 }
 
 img{
