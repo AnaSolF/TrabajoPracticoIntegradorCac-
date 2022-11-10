@@ -95,14 +95,14 @@
 
   <div class="container mt-5 mb-5">
     <div class="row">
-      <div class="col-sm-3">
+      <div class="col-sm-3  mb-5">
         <!-- IMAGEN USUARIO -->
         <div class="text-center  mb-2 imagen_usuario">
           <i class="fa fa-user fa-3x"></i>
         </div>
         <!-- NOMBRE USUARIO -->
         <div class="text-center mt-3 mb-3">
-          <h5 class="fw-bold">Bienvenido, @nombre_usuario</h5>
+          <h5 class="fw-bold" id="texto_usuario">Bienvenido, @nombre_usuario</h5>
         </div>
         <!-- LISTA DE OPCIONES -->
         <ul class="list-group border-gradient menu_usuario">
@@ -121,7 +121,7 @@
           <li class="list-group-item text-right">
             <span class="pull-left">
               <strong>
-                <a href="#">
+                <a href="login.html">
                   Cerrar
                   sesi&oacute;n
                 </a>
@@ -169,7 +169,8 @@
                     <label for="nombre_usuario">
                       Nombre*
                     </label>
-                    <input type="text" class="form-control" name="nombre_usuario" id="nombre_usuario" placeholder="">
+                    <input type="text" class="form-control" name="nombre_usuario" id="nombre_usuario" placeholder=""
+                      required>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -177,8 +178,8 @@
                     <label for="apellido_usuario">
                       Apellido*
                     </label>
-                    <input type="text" class="form-control" name="apellido_usuario" id="apellido_usuario"
-                      placeholder="">
+                    <input type="text" class="form-control" name="apellido_usuario" id="apellido_usuario" placeholder=""
+                      required>
                   </div>
                 </div>
               </div>
@@ -189,7 +190,7 @@
                     <label for="dni_usuario">
                       DNI*
                     </label>
-                    <input type="text" class="form-control" name="dni_usuario" id="dni_usuario" placeholder="">
+                    <input type="text" class="form-control" name="dni_usuario" id="dni_usuario" placeholder="" required>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -197,7 +198,7 @@
                     <label for="genero_usuario">
                       G&eacute;nero*
                     </label>
-                    <select name="genero_usuario" id="genero_usuario" class="form-control">
+                    <select name="genero_usuario" id="genero_usuario" class="form-control" required>
                       <option value=""></option>
                       <option value="F">Femenino</option>
                       <option value="M">Masculino</option>
@@ -213,7 +214,8 @@
                     <label for="telefono_usuario">
                       Tel&eacute;fono*
                     </label>
-                    <input type="tel" class="form-control" name="telefono_usuario" id="telefono_usuario" placeholder="">
+                    <input type="tel" class="form-control" name="telefono_usuario" id="telefono_usuario" placeholder=""
+                      required>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -221,11 +223,27 @@
                     <label for="email_usuario">
                       Email*
                     </label>
-                    <input type="email" class="form-control" name="email_usuario" id="email_usuario" placeholder="">
+                    <input type="email" class="form-control" name="email_usuario" id="email_usuario" placeholder=""
+                      required>
                   </div>
                 </div>
               </div>
-
+              <div class="row mt-2">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="nombre_usuario">
+                      Usuario*
+                    </label>
+                    <input type="text" class="form-control" name="nombre_usuario" id="nombre_usuario" placeholder=""
+                      readonly>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <small><strong>* Campos obligatorios</strong></small>
+                </div>
+              </div>
               <div class="form-group">
                 <div class="col-xs-12 mt-2" style="text-align: right;">
                   <button class="btn btn-md btn-success" type="submit">
@@ -249,7 +267,7 @@
                       Provincia*
                     </label>
                     <input type="text" class="form-control" name="provincia_usuario" id="provincia_usuario"
-                      placeholder="">
+                      placeholder="" required>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -258,7 +276,7 @@
                       Localidad*
                     </label>
                     <input type="text" class="form-control" name="localidad_usuario" id="localidad_usuario"
-                      placeholder="">
+                      placeholder="" required>
                   </div>
                 </div>
               </div>
@@ -277,7 +295,8 @@
                     <label for="calle_usuario">
                       Calle*
                     </label>
-                    <input type="text" class="form-control" name="calle_usuario" id="calle_usuario" placeholder="">
+                    <input type="text" class="form-control" name="calle_usuario" id="calle_usuario" placeholder=""
+                      required>
                   </div>
                 </div>
               </div>
@@ -299,6 +318,11 @@
                     <input type="text" class="form-control" name="departamento_usuario" id="departamento_usuario"
                       placeholder="">
                   </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <small><strong>* Campos obligatorios</strong></small>
                 </div>
               </div>
               <div class="form-group">
@@ -356,10 +380,20 @@
               <!-- PASSWORD ANTERIOR -->
               <div class="col-md-12 mt-2">
                 <div class="form-group">
+                  <label for="nombre_usuario_password">
+                    Usuario*
+                  </label>
+                  <input type="text" class="form-control" name="nombre_usuario_password" id="nombre_usuario_password"
+                    placeholder="" readonly>
+                </div>
+              </div>
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
                   <label for="password_usuario">
                     Contrase&ntilde;a actual*
                   </label>
-                  <input type="text" class="form-control" name="password_usuario" id="password_usuario" placeholder="">
+                  <input type="text" class="form-control" name="password_usuario" id="password_usuario" placeholder=""
+                    required>
                 </div>
               </div>
               <div class="col-md-12 mt-2">
@@ -368,7 +402,7 @@
                     Contrase&ntilde;a nueva*
                   </label>
                   <input type="text" class="form-control" name="password_nueva_usuario" id="password_nueva_usuario"
-                    placeholder="">
+                    placeholder="" required>
                 </div>
               </div>
               <div class="col-md-12 mt-2">
@@ -377,7 +411,12 @@
                     Repetir contrase&ntilde;a*
                   </label>
                   <input type="text" class="form-control" name="password_nueva_confir_usuario"
-                    id="password_nueva_confir_usuario" placeholder="">
+                    id="password_nueva_confir_usuario" placeholder="" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <small><strong>* Campos obligatorios</strong></small>
                 </div>
               </div>
               <div class="form-group">
