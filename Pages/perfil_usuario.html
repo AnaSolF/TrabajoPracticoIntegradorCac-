@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark shadow-lg bg-dark-custom">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="../Imagenes/Logo.jpeg" alt="logo" width="90px" class="img-responsive">
+          <img src="../Imagenes/Logo.jpeg" alt="logo" style="width: 180px" class="img-responsive">
         </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item dropdown" style="display: block;">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -71,7 +71,7 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link active" href="perfil_usuario.html">
                   <i class="fa fa-user"></i>
                 </a>
               </li>
@@ -81,13 +81,14 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="./Pages/carrito.html">
                   <i class="fa fa-shopping-cart"></i>
                 </a>
               </li>
             </ul>
           </div>
         </div>
+      </div>
       </div>
     </nav>
     <!--Fin Menú hamburguesa-->
@@ -121,7 +122,7 @@
           <li class="list-group-item text-right">
             <span class="pull-left">
               <strong>
-                <a href="login.html">
+                <a href="#" onclick="cerrar_sesion();">
                   Cerrar
                   sesi&oacute;n
                 </a>
@@ -231,10 +232,10 @@
               <div class="row mt-2">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label for="nombre_usuario">
+                    <label for="nickname_usuario">
                       Usuario*
                     </label>
-                    <input type="text" class="form-control" name="nombre_usuario" id="nombre_usuario" placeholder=""
+                    <input type="text" class="form-control" name="nickname_usuario" id="nickname_usuario" placeholder=""
                       readonly>
                   </div>
                 </div>
@@ -266,8 +267,32 @@
                     <label for="provincia_usuario">
                       Provincia*
                     </label>
-                    <input type="text" class="form-control" name="provincia_usuario" id="provincia_usuario"
-                      placeholder="" required>
+                    <select class="form-select" id="provincia_usuario" name="provincia_usuario" required>
+                      <option selected disabled value=""></option>
+                      <option value="Buenos Aires">Buenos Aires</option>
+                      <option value="Catamarca">Catamarca</option>
+                      <option value="Chaco">Chaco</option>
+                      <option value="Chubut">Chubut</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Corrientes">Corrientes</option>
+                      <option value="Entre Rios">Entre Rios</option>
+                      <option value="Formosa">Formosa</option>
+                      <option value="Jujuy">Jujuy</option>
+                      <option value="La Pampa">La Pampa</option>
+                      <option value="La Rioja">La Rioja</option>
+                      <option value="Mendoza">Mendoza</option>
+                      <option value="Misiones">Misiones</option>
+                      <option value="Neuquén">Neuquén</option>
+                      <option value="Rio Negro">Rio Negro</option>
+                      <option value="Salta">Salta</option>
+                      <option value="San Juan">San Juan</option>
+                      <option value="San Luis">San Luis</option>
+                      <option value="Santa Cruz">Santa Cruz</option>
+                      <option value="Santa Fe">Santa Fe</option>
+                      <option value="Santiago del Estero">Santiago del Estero</option>
+                      <option value="Tierra del Fuego">Tierra del Fuego</option>
+                      <option value="Tucuman">Tucuman</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -380,11 +405,11 @@
               <!-- PASSWORD ANTERIOR -->
               <div class="col-md-12 mt-2">
                 <div class="form-group">
-                  <label for="nombre_usuario_password">
+                  <label for="nickname_usuario_password">
                     Usuario*
                   </label>
-                  <input type="text" class="form-control" name="nombre_usuario_password" id="nombre_usuario_password"
-                    placeholder="" readonly>
+                  <input type="text" class="form-control" name="nickname_usuario_password"
+                    id="nickname_usuario_password" placeholder="" readonly>
                 </div>
               </div>
               <div class="col-md-12 mt-2">
@@ -392,8 +417,8 @@
                   <label for="password_usuario">
                     Contrase&ntilde;a actual*
                   </label>
-                  <input type="text" class="form-control" name="password_usuario" id="password_usuario" placeholder=""
-                    required>
+                  <input type="password" class="form-control" name="password_usuario" id="password_usuario"
+                    placeholder="" required>
                 </div>
               </div>
               <div class="col-md-12 mt-2">
@@ -401,7 +426,7 @@
                   <label for="password_nueva_usuario">
                     Contrase&ntilde;a nueva*
                   </label>
-                  <input type="text" class="form-control" name="password_nueva_usuario" id="password_nueva_usuario"
+                  <input type="password" class="form-control" name="password_nueva_usuario" id="password_nueva_usuario"
                     placeholder="" required>
                 </div>
               </div>
@@ -410,7 +435,7 @@
                   <label for="password_nueva_confir_usuario">
                     Repetir contrase&ntilde;a*
                   </label>
-                  <input type="text" class="form-control" name="password_nueva_confir_usuario"
+                  <input type="password" class="form-control" name="password_nueva_confir_usuario"
                     id="password_nueva_confir_usuario" placeholder="" required>
                 </div>
               </div>

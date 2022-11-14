@@ -1,18 +1,29 @@
 //SETEO INICIAL DE DATOS
 (function () {
-    if (localStorage.getItem('usuario')) {
-        const usuario_actual = JSON.parse(localStorage.getItem('usuario'));
+    if (localStorage.getItem('nombre JSON')) {
+        const usuario_actual = JSON.parse(localStorage.getItem('nombre JSON'));
 
-        document.getElementById("texto_usuario").value = usuario_actual.nombre + "" + usuario_actual.apellido;
+        document.getElementById("texto_usuario").innerText = "Bienvenid@, " + usuario_actual["nombre"] + "" + usuario_actual["apellido"];
 
-        document.getElementById("nombre_usuario").value = usuario_actual.nombre;
-        document.getElementById("apellido_usuario").value = usuario_actual.apellido;
-        document.getElementById("dni_usuario").value = usuario_actual.dni;
-        document.getElementById("genero_usuario").value = usuario_actual.genero;
-        document.getElementById("telefono_usuario").value = usuario_actual.telefono;
-        document.getElementById("email_usuario").value = usuario_actual.email;
-        document.getElementById("nombre_usuario").value = usuario_actual.nombre_usuario;
-        document.getElementById("nombre_usuario_password").value = usuario_actual.nombre_usuario;
+        document.getElementById("nombre_usuario").value = usuario_actual["nombre"];
+        document.getElementById("apellido_usuario").value = usuario_actual["apellido"];
+        document.getElementById("dni_usuario").value = usuario_actual["dni"] != undefined ? usuario_actual["dni"] : "";
+        document.getElementById("genero_usuario").value = usuario_actual["genero"] != undefined ? usuario_actual["genero"] : "";
+        document.getElementById("telefono_usuario").value = usuario_actual["telefono"] != undefined ? usuario_actual["telefono"] : "";
+        document.getElementById("email_usuario").value = usuario_actual["correo"];
+        document.getElementById("nickname_usuario").value = usuario_actual["nombre de usuario"];
+        document.getElementById("nickname_usuario_password").value = usuario_actual["nombre de usuario"];
+    }
+
+    if (localStorage.getItem('direcciones')) {
+        const direcciones = JSON.parse(localStorage.getItem('direcciones'));
+
+        document.getElementById("provincia_usuario").value = direcciones.provincia;
+        document.getElementById("localidad_usuario").value = direcciones.localidad;
+        document.getElementById("barrio_usuario").value = direcciones.barrio;
+        document.getElementById("calle_usuario").value = direcciones.calle;
+        document.getElementById("numero_usuario").value = direcciones.numero;
+        document.getElementById("departamento_usuario").value = direcciones.departamento;
     }
 })();
 
@@ -42,12 +53,12 @@ form_perfil.addEventListener("submit", e => {
     let genero = document.getElementById("genero_usuario").value;
     let telefono = document.getElementById("telefono_usuario").value;
     let email = document.getElementById("email_usuario").value;
-    let nombre_usuario = document.getElementById("nombre_usuario").value;
+    let nombre_usuario = document.getElementById("nickname_usuario").value;
 
     //VALIDACION USUARIO A ACTUALIZAR POR NOMBRE USUARIO INGRESADO
-    if (localStorage.getItem('usuario')) {
-        const usuario_actual = JSON.parse(localStorage.getItem('usuario'))
-        if (nombre_usuario != usuario_actual.nombre_usuario) {
+    if (localStorage.getItem('nombre JSON')) {
+        const usuario_actual = JSON.parse(localStorage.getItem('nombre JSON'))
+        if (nombre_usuario != usuario_actual["nombre de usuario"]) {
             alert("Usuario no registrado");
             return false;
         }
@@ -57,20 +68,31 @@ form_perfil.addEventListener("submit", e => {
             let usuario_update = {
                 "nombre": nombre,
                 "apellido": apellido,
+                "nombre de usuario": nombre_usuario,
+                "correo": email,
+                "contraseña": usuario_actual["contraseña"],
+                "provincia": usuario_actual["provincia"],
+                "departamento": usuario_actual["departamento"],
+                "codigo postal": usuario_actual["codigo postal"],
+                "promociones": usuario_actual["promociones"],
+                "terminos": usuario_actual["terminos"],
                 "dni": dni,
                 "genero": genero,
-                "telefono": telefono,
-                "email": email,
-                "password": usuario_actual.password
+                "telefono": telefono
             }
 
             //ACTUALIZAMOS DATOS DEL USUARIO
-            localStorage.setItem("usuario", JSON.stringify(usuario_update));
+            localStorage.setItem("nombre JSON", JSON.stringify(usuario_update));
 
             //CHEQUEAMOS ACTUALIZACION
-            let registro_obtenido = JSON.parse(localStorage.getItem("usuario"));
+            let registro_obtenido = JSON.parse(localStorage.getItem("nombre JSON"));
 
             console.table(registro_obtenido);
+
+            alert("Sus datos han sido actualizados");
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
         }
     } else {
         alert("Usuario no registrado");
@@ -110,6 +132,11 @@ form_direcciones.addEventListener("submit", e => {
     let registro_obtenido = JSON.parse(localStorage.getItem("direcciones"));
 
     console.table(registro_obtenido);
+
+    alert("Sus datos han sido actualizados");
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
 })
 
 // ACTUALIZACION PASSWORD
@@ -119,7 +146,7 @@ form_password.addEventListener("submit", e => {
     e.preventDefault();
 
     // OBTENCION CAMPOS INDICADOS POR EL USUARIO
-    let nombre_usuario = document.getElementById("nombre_usuario_password").value;
+    let nombre_usuario = document.getElementById("nickname_usuario_password").value;
     let password = document.getElementById("password_usuario").value;
     let nueva_password = document.getElementById("password_nueva_usuario").value;
     let nueva_password_confir = document.getElementById("password_nueva_confir_usuario").value;
@@ -131,34 +158,59 @@ form_password.addEventListener("submit", e => {
     }
 
     //VALIDACION USUARIO A ACTUALIZAR POR NOMBRE USUARIO INGRESADO
-    if (localStorage.getItem('usuario')) {
-        const usuario_actual = JSON.parse(localStorage.getItem('usuario'));
-        if (nombre_usuario != usuario_actual.nombre_usuario) {
+    if (localStorage.getItem('nombre JSON')) {
+        const usuario_actual = JSON.parse(localStorage.getItem('nombre JSON'));
+        if (nombre_usuario != usuario_actual["nombre de usuario"]) {
             alert("Usuario no registrado");
+            return false;
+        }
+        else if (password != usuario_actual["contraseña"]) {
+            alert("La contraseña no coincide con la utilizada actualmente");
+            return false;
         }
         else {
 
             //NUEVO USUARIO ACTUALIZADO
+            //NUEVO USUARIO ACTUALIZADO
             let usuario_update = {
-                "nombre": usuario_actual.nombre,
-                "apellido": usuario_actual.apellido,
-                "dni": usuario_actual.dni,
-                "genero": usuario_actual.genero,
-                "telefono": usuario_actual.telefono,
-                "email": usuario_actual.email,
-                "password": nueva_password
+                "nombre": usuario_actual["nombre"],
+                "apellido": usuario_actual["apellido"],
+                "nombre de usuario": usuario_actual["nombre de usuario"],
+                "correo": usuario_actual["correo"],
+                "contraseña": nueva_password,
+                "provincia": usuario_actual["provincia"],
+                "departamento": usuario_actual["departamento"],
+                "codigo postal": usuario_actual["codigo postal"],
+                "promociones": usuario_actual["promociones"],
+                "terminos": usuario_actual["terminos"],
+                "dni": usuario_actual["dni"],
+                "genero": usuario_actual["genero"],
+                "telefono": usuario_actual["telefono"],
             }
 
             //ACTUALIZAMOS DATOS DEL USUARIO
             localStorage.setItem("usuario", JSON.stringify(usuario_update));
 
             //CHEQUEAMOS ACTUALIZACION
-            let registro_obtenido = JSON.parse(localStorage.getItem("usuario"));
+            let registro_obtenido = JSON.parse(localStorage.getItem("nombre JSON"));
 
             console.table(registro_obtenido);
+
+            alert("Sus datos han sido actualizados");
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
         }
     } else {
         alert("Usuario no registrado");
         return false;
     }
 })
+
+//CIERRE SESION
+function cerrar_sesion() {
+    localStorage.clear();
+    setTimeout(() => {
+        location.href = "../Pages/login.html";
+    }, 500);
+}

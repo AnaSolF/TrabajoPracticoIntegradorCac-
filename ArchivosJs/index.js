@@ -14,7 +14,7 @@ const productos = [
     {
         id: 2,
         nombre: "Sandwich de huevo, queso y panceta",
-        img: "../Imagenes/Destacado2.jpg" ,
+        img: "../Imagenes/Destacado2.jpg",
         titulo: "25% off!",
         precio: 800,
         descripcion: "Combo mundial. Hace un golazo comiendo rico y gastando menos.",
@@ -48,11 +48,11 @@ const productos = [
 ];
 
 //Agregamos cards al carrito, sin repetirlas.
-function AgregarSinRepetir (carrito, producto) {
+function AgregarSinRepetir(carrito, producto) {
     if (carrito.indexOf(producto) === -1) {
         carrito.push(producto);
         guardarEnStorage("Carrito", carrito);
-    } 
+    }
 }
 
 
@@ -71,18 +71,18 @@ let carrito = [];
 const generarCards = (productos) => {
     // div cards de productos.
     let cards = document.getElementById("products");
-    
-   
+
+
     // ForEach
-    productos.forEach( producto => {
-        
-        
- 
-         // Creamos la etiqueta Card
-         let cardProductos = document.createElement("div");
-         cardProductos.className = "card m-3" ;
- 
-         let card = `
+    productos.forEach(producto => {
+
+
+
+        // Creamos la etiqueta Card
+        let cardProductos = document.createElement("div");
+        cardProductos.className = "card m-3";
+
+        let card = `
              <img class="card-img-top" src="${producto.img}" alt="Card image cap">
              <div class="card-body >
                  <h4 class="card-title">${producto.nombre}</h4>
@@ -91,42 +91,60 @@ const generarCards = (productos) => {
                  <a class="btn btn-warning" id="cart${producto.id}">Agregar al Carrito</a>
              </div>
          `;
-        
-         // Escribimos el contenido de la plantilla card en la etiqueta div que creamos.
-         cardProductos.innerHTML = card;
- 
-         // Agregar etiqueta hija dentro de una etiqueta padre.
-         cards.appendChild(cardProductos);
- 
-         let productCard = document.getElementById("cart" + producto.id);
- 
-         productCard.addEventListener("click", (evento) => {
-             alert("Agregar al carrito?");
-             evento.preventDefault();
-             
-                 // Agregamos el producto al carrito
-             AgregarSinRepetir(carrito, producto);
-                
-         });
-       
-     });
-    
- }
- 
- 
- function guardarEnStorage (clave,valor) {
-     localStorage.setItem(clave, JSON.stringify(valor));
- }
- 
- 
- generarCards(productos);
- 
- 
- const formulario = document.getElementById("formulario");
- 
- formulario.addEventListener("submit", (evento) => {
-     evento.preventDefault();
-     localStorage.setItem("Carrito", JSON.stringify(carrito));
- });
 
- 
+        // Escribimos el contenido de la plantilla card en la etiqueta div que creamos.
+        cardProductos.innerHTML = card;
+
+        // Agregar etiqueta hija dentro de una etiqueta padre.
+        cards.appendChild(cardProductos);
+
+        let productCard = document.getElementById("cart" + producto.id);
+
+        productCard.addEventListener("click", (evento) => {
+            alert("Agregar al carrito?");
+            evento.preventDefault();
+
+            // Agregamos el producto al carrito
+            AgregarSinRepetir(carrito, producto);
+
+        });
+
+    });
+
+}
+
+
+function guardarEnStorage(clave, valor) {
+    localStorage.setItem(clave, JSON.stringify(valor));
+}
+
+
+generarCards(productos);
+
+
+const formulario = document.getElementById("formulario");
+
+formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    localStorage.setItem("Carrito", JSON.stringify(carrito));
+});
+
+//INICIALIZACION PERFIL
+(function () {
+    if (localStorage.getItem('nombre JSON')) {
+        document.querySelectorAll('.usuario_noregistrado').forEach(function (el) {
+            el.style.display = 'none';
+        });
+        document.querySelectorAll('.usuario_registrado').forEach(function (el) {
+            el.style.display = 'block';
+        });
+    }
+    else {
+        document.querySelectorAll('.usuario_noregistrado').forEach(function (el) {
+            el.style.display = 'block';
+        });
+        document.querySelectorAll('.usuario_registrado').forEach(function (el) {
+            el.style.display = 'none';
+        });
+    }
+})();
