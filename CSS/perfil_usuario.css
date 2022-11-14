@@ -7,7 +7,7 @@
 }
 
 .border-gradient {
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 10px 10px 0px;
     border-width: 0;
     border-left: 5px solid;
     border-image: linear-gradient(#beab35, #f86462) 0 100%;
@@ -20,4 +20,26 @@
 
 .menu_usuario a:hover{
     color: #f86462;
+}
+
+.menu_usuario_tabs .nav-link{
+    color: #2c99ae;
+}
+
+#form_perfil button, #form_direcciones button{
+    background-color: #07cc0d;
+    border-color: #07cc0d;
+}
+
+.list-group-item.active{
+    background: #000;
+    border-color: transparent;
+}
+
+.list-group-item.active a{
+    color: #FFF;
+}
+
+.tab-pane .card-text{
+    font-size: large;
 }
