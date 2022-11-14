@@ -78,6 +78,10 @@ nav{
 
 /* - Categorias sujeto a modificaciones . Fin - */
 
+/*main img{
+  max-height: 50vh;
+  object-fit: cover;
+}*/
 
 .carousel-inner {
 color: black;
@@ -203,11 +207,7 @@ footer {
 border-style: none;
 flex-flow: row wrap;
 width: 100%;
-<<<<<<< Updated upstream
-justify-content: center;
-=======
-justify-content: space-around;
->>>>>>> Stashed changes
+margin-left: 12%;
 }
 
 img{
@@ -226,9 +226,8 @@ img{
 }
 
 .card-body{
+width: 300px;
 border-style: none;
-font-weight:600;
-padding-bottom: 10px;
 }
 
 .card img{
@@ -295,4 +294,56 @@ flex-direction: column;
 
 #botones{
   display: flex;
+
 }
+
+/* ---------------- Pagina de Registro -----------------*/
+
+.main-registro, .form-container{
+  background: #ff9293;
+}
+
+.form-label{
+  color: white;
+}
+
+.registro, .login{
+  width: 60%;
+  margin: auto;
+}
+
+.contraseña-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contraseña{
+  width: 49% !important;
+}
+
+/* .main-registro{
+  background: linear-gradient(90deg, rgba(157,157,157,1) 0%, rgba(157,157,157,1) 10%, rgba(252,103,105,1) 41%, rgba(212,87,88,1) 61%, rgba(0,0,0,0.5368522408963585) 100%);
+}
+
+.form-label{
+  color: white !important;
+}
+
+.registro{
+  width: 50%;
+  margin: auto;
+}
+
+form{
+  
+} */
+/* ---------------- Fin Pagina de Registro -----------------*/
+
+/* ---------------- Pagina de Login ------------------------*/
+
+.submit-registro{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------------- Fin de pagina de Login -----------------*/

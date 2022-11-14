@@ -88,7 +88,7 @@ const generarCards = (productos) => {
                  <h4 class="card-title">${producto.nombre}</h4>
                  <p class="card-text">${producto.descripcion}</p>
                  <p class="card-text"> $ ${producto.precio}</p>
-                 <a class="btn btn-dark" id="cart${producto.id}">Agregar al Carrito</a>
+                 <a class="btn btn-warning" id="cart${producto.id}">Agregar al Carrito</a>
              </div>
          `;
         
