@@ -106,6 +106,29 @@ p .Tachado {
   margin-left: 10px;
 }
 
+#cont-card {
+  display: flex;
+  justify-content: center;
+}
+
+#tarjeta img{
+  height: 50%;
+  width: 100%;
+  margin: 0;
+}
+
+#tarjeta {
+  height: 500px;
+  width: 400px;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+#body.card-body{
+  width: 400px;
+  justify-content: center;
+}
 
 /* - footer - */
 
