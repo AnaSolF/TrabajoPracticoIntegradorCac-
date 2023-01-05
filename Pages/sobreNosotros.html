@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../CSS/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Home</title>
+</head>
+
+<body>
+  <header>
+    <!--Enlaces de navegación-->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg bg-dark-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./../Imagenes/Logo.jpeg" alt="logo" style="width: 180px" class="img-responsive">
+        </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown" style="display: block;">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Todas</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Big Burgers</a></li>
+                <li><a class="dropdown-item" href="#">Little Burgers</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Vegetariana</a></li>
+                <li><a class="dropdown-item" href="#">Vegana</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">&iquest;C&oacute;mo llegar?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-user"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-heart"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fa fa-shopping-cart"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+    <!--Fin Menú hamburguesa-->
+  </header>
+
+  <!-- Inicio de Form Registro -->
+
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-sm-3  mb-5">
+        <!-- IMAGEN USUARIO -->
+        <div class="text-center  mb-2 imagen_usuario">
+          <i class="fa fa-user fa-3x"></i>
+        </div>
+        <!-- NOMBRE USUARIO -->
+        <div class="text-center mt-3 mb-3">
+          <h5 class="fw-bold" id="texto_usuario">Bienvenido, @nombre_usuario</h5>
+        </div>
+        <!-- LISTA DE OPCIONES -->
+        <ul class="list-group border-gradient menu_usuario">
+          <li class="list-group-item text-right active" id="li-perfil-tab"><a href="#/"
+              onclick="change_Tab('perfil-tab')">Perfil</a></li>
+          <li class="list-group-item text-right" id="li-direcciones-tab"><a href="#/"
+              onclick="change_Tab('direcciones-tab')">Direcciones</a>
+          </li>
+          <li class="list-group-item text-right" id="li-pedidos-tab"><a href="#/"
+              onclick="change_Tab('pedidos-tab')">Pedidos</a></li>
+          <li class="list-group-item text-right" id="li-favoritos-tab"><a href="#/"
+              onclick="change_Tab('favoritos-tab')">Favoritos</a></li>
+          <li class="list-group-item text-right" id="li-password-tab"><a href="#/"
+              onclick="change_Tab('password-tab')">Cambiar
+              contrase&ntilde;a</a></li>
+          <li class="list-group-item text-right">
+            <span class="pull-left">
+              <strong>
+                <a href="#" onclick="cerrar_sesion();">
+                  Cerrar
+                  sesi&oacute;n
+                </a>
+              </strong>
+            </span>
+          </li>
+        </ul>
+
+      </div>
+      <!--/col-3-->
+      <div class="col-sm-9">
+        <!-- LISTA DE OPCIONES -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="perfil-tab" data-bs-toggle="tab" data-bs-target="#perfil-tab-pane"
+              type="button" role="tab" aria-controls="perfil-tab-pane" aria-selected="true">Perfil</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="direcciones-tab" data-bs-toggle="tab" data-bs-target="#direcciones-tab-pane"
+              type="button" role="tab" aria-controls="direcciones-tab-pane" aria-selected="false">Direcciones</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pedidos-tab" data-bs-toggle="tab" data-bs-target="#pedidos-tab-pane"
+              type="button" role="tab" aria-controls="pedidos-tab-pane" aria-selected="false">Pedidos</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="favoritos-tab" data-bs-toggle="tab" data-bs-target="#favoritos-tab-pane"
+              type="button" role="tab" aria-controls="pedidos-tab-pane" aria-selected="false">Favoritos</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="password-tab" data-bs-toggle="tab" data-bs-target="#password-tab-pane"
+              type="button" role="tab" aria-controls="password-tab-pane" aria-selected="false">Cambiar
+              contrase&ntilde;a</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="perfil-tab-pane" role="tabpanel" aria-labelledby="perfil-tab"
+            tabindex="0">
+            <!-- PERFIL -->
+            <form class="form mt-4" action="##" method="post" id="form_perfil">
+              <!-- APELLIDO + NOMBRE -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nombre_usuario">
+                      Nombre*
+                    </label>
+                    <input type="text" class="form-control" name="nombre_usuario" id="nombre_usuario" placeholder=""
+                      required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="apellido_usuario">
+                      Apellido*
+                    </label>
+                    <input type="text" class="form-control" name="apellido_usuario" id="apellido_usuario" placeholder=""
+                      required>
+                  </div>
+                </div>
+              </div>
+              <!-- DNI + GENERO -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="dni_usuario">
+                      DNI*
+                    </label>
+                    <input type="text" class="form-control" name="dni_usuario" id="dni_usuario" placeholder="" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="genero_usuario">
+                      G&eacute;nero*
+                    </label>
+                    <select name="genero_usuario" id="genero_usuario" class="form-control" required>
+                      <option value=""></option>
+                      <option value="F">Femenino</option>
+                      <option value="M">Masculino</option>
+                      <option value="X">No Binario</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!-- DATOS DE CONTACTO -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="telefono_usuario">
+                      Tel&eacute;fono*
+                    </label>
+                    <input type="tel" class="form-control" name="telefono_usuario" id="telefono_usuario" placeholder=""
+                      required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email_usuario">
+                      Email*
+                    </label>
+                    <input type="email" class="form-control" name="email_usuario" id="email_usuario" placeholder=""
+                      required>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="nickname_usuario">
+                      Usuario*
+                    </label>
+                    <input type="text" class="form-control" name="nickname_usuario" id="nickname_usuario" placeholder=""
+                      readonly>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <small><strong>* Campos obligatorios</strong></small>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <button class="btn btn-md btn-success" type="submit">
+                    <i class="fa fa-check"></i>
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </form>
+            <hr>
+          </div>
+          <div class="tab-pane fade" id="direcciones-tab-pane" role="tabpanel" aria-labelledby="direcciones-tab"
+            tabindex="0">
+            <!-- DIRECCIONES -->
+            <form class="form mt-4" action="##" method="post" id="form_direcciones">
+              <!-- PROVINCIA + LOCALIDAD -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="provincia_usuario">
+                      Provincia*
+                    </label>
+                    <select class="form-select" id="provincia_usuario" name="provincia_usuario" required>
+                      <option selected disabled value=""></option>
+                      <option value="Buenos Aires">Buenos Aires</option>
+                      <option value="Catamarca">Catamarca</option>
+                      <option value="Chaco">Chaco</option>
+                      <option value="Chubut">Chubut</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Corrientes">Corrientes</option>
+                      <option value="Entre Rios">Entre Rios</option>
+                      <option value="Formosa">Formosa</option>
+                      <option value="Jujuy">Jujuy</option>
+                      <option value="La Pampa">La Pampa</option>
+                      <option value="La Rioja">La Rioja</option>
+                      <option value="Mendoza">Mendoza</option>
+                      <option value="Misiones">Misiones</option>
+                      <option value="Neuquén">Neuquén</option>
+                      <option value="Rio Negro">Rio Negro</option>
+                      <option value="Salta">Salta</option>
+                      <option value="San Juan">San Juan</option>
+                      <option value="San Luis">San Luis</option>
+                      <option value="Santa Cruz">Santa Cruz</option>
+                      <option value="Santa Fe">Santa Fe</option>
+                      <option value="Santiago del Estero">Santiago del Estero</option>
+                      <option value="Tierra del Fuego">Tierra del Fuego</option>
+                      <option value="Tucuman">Tucuman</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="localidad_usuario">
+                      Localidad*
+                    </label>
+                    <input type="text" class="form-control" name="localidad_usuario" id="localidad_usuario"
+                      placeholder="" required>
+                  </div>
+                </div>
+              </div>
+              <!-- BARRIO + CALLE -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="barrio_usuario">
+                      Barrio
+                    </label>
+                    <input type="text" class="form-control" name="barrio_usuario" id="barrio_usuario" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="calle_usuario">
+                      Calle*
+                    </label>
+                    <input type="text" class="form-control" name="calle_usuario" id="calle_usuario" placeholder=""
+                      required>
+                  </div>
+                </div>
+              </div>
+              <!-- NRO + DEPARTAMENTO -->
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="numero_usuario">
+                      N&uacute;mero
+                    </label>
+                    <input type="text" class="form-control" name="numero_usuario" id="numero_usuario" placeholder="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="departamento_usuario">
+                      Departamento
+                    </label>
+                    <input type="text" class="form-control" name="departamento_usuario" id="departamento_usuario"
+                      placeholder="">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <small><strong>* Campos obligatorios</strong></small>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <button class="btn btn-md btn-success" type="submit">
+                    <i class="fa fa-check"></i>
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </form>
+            <hr>
+          </div>
+          <div class="tab-pane fade" id="pedidos-tab-pane" role="tabpanel" aria-labelledby="pedidos-tab" tabindex="0">
+            <div class="card mt-4">
+              <div class="card-header">
+                Fecha del pedido: 04/11/2022 10:20
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Total $450</h5>
+                <p class="card-text">Nro de pedido #455655</p>
+                <div class="alert alert-success" role="alert">
+                  Entregado
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4">
+              <div class="card-header">
+                Fecha del pedido: 06/10/2022 10:50
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Total $400</h5>
+                <p class="card-text">Nro de pedido #455645</p>
+                <div class="alert alert-success" role="alert">
+                  Entregado
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4">
+              <div class="card-header">
+                Fecha del pedido: 04/10/2022 13:00
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Total $950</h5>
+                <p class="card-text">Nro de pedido #455665</p>
+                <div class="alert alert-success" role="alert">
+                  Entregado
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="password-tab-pane" role="tabpanel" aria-labelledby="password-tab" tabindex="0">
+            <!-- CAMBIAR PASSWORD -->
+            <form class="form mt-4" action="##" method="post" id="form_password">
+              <!-- PASSWORD ANTERIOR -->
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
+                  <label for="nickname_usuario_password">
+                    Usuario*
+                  </label>
+                  <input type="text" class="form-control" name="nickname_usuario_password"
+                    id="nickname_usuario_password" placeholder="" readonly>
+                </div>
+              </div>
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
+                  <label for="password_usuario">
+                    Contrase&ntilde;a actual*
+                  </label>
+                  <input type="password" class="form-control" name="password_usuario" id="password_usuario"
+                    placeholder="" required>
+                </div>
+              </div>
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
+                  <label for="password_nueva_usuario">
+                    Contrase&ntilde;a nueva*
+                  </label>
+                  <input type="password" class="form-control" name="password_nueva_usuario" id="password_nueva_usuario"
+                    placeholder="" required>
+                </div>
+              </div>
+              <div class="col-md-12 mt-2">
+                <div class="form-group">
+                  <label for="password_nueva_confir_usuario">
+                    Repetir contrase&ntilde;a*
+                  </label>
+                  <input type="password" class="form-control" name="password_nueva_confir_usuario"
+                    id="password_nueva_confir_usuario" placeholder="" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <small><strong>* Campos obligatorios</strong></small>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12 mt-2" style="text-align: right;">
+                  <button class="btn btn-md btn-success" type="submit">
+                    <i class="fa fa-check"></i>
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Fin de Form Registro -->
+
+  <footer><!--Comienzo footer-->
+    <div class="foot">
+      <ul class="nav-item dropdown">
+        
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" href="#"><li>Como comprar?</li></a>
+          <a class="dropdown-item" href="#"><li>Terminos y condiciones</li></a>
+          <a class="dropdown-item" href="#"><li>Preguntas Frecuentes</li></a>
+          <a class="dropdown-item" href="#"><li>Quienes Somos?</li></a>
+          <a class="dropdown-item" href="#"><li>Contactanos</li></a>
+          <a class="dropdown-item" href="#"><li>Reembolso y devoluciones</li></a>
+          <a class="dropdown-item" href="#"><li>Políticas de privacidad</li></a>
+          <a class="dropdown-item" href="#"><li>Políticas de envíos</li></a>
+        </ul>
+      </ul>
+      
+      <ul class="dropbox-footer">
+        <li><strong>Atencion al Cliente</strong></li>
+        <a href="#"><li>Como comprar?</li></a>
+        <a href="#"><li>Terminos y condiciones</li></a>
+        <a href="#"><li>Preguntas Frecuentes</li></a>
+        <a href="#"><li>Quienes Somos?</li></a>
+        <a href="#"><li>Contactanos</li></a>
+        <a href="#"><li>Reembolso y devoluciones</li></a>
+        <a href="#"><li>Políticas de privacidad</li></a>
+        <a href="#"><li>Políticas de envíos</li></a>
+      </ul>
+    </div>
+    <div class="foot">
+      <ul class="nav-item dropdown">
+       
+        <ul class="dropdown-menu">
+          <a class="dropdown-item" href="#"><li>Empresas</li></a>
+          <a class="dropdown-item" href="#"><li>Zonas de Envio</li></a>
+          <a class="dropdown-item" href="#"><li>Promociones Bancarias</li></a>
+        </ul>
+      </ul>
+
+      <ul class="dropbox-footer">
+        <li><strong>Compra online</strong></li>
+        <a href="#"><li>Empresas</li></a>
+        <a href="#"><li>Zonas de Envio</li></a>
+        <a href="#"><li>Promociones Bancarias</li></a>
+      </ul>
+    </div>
+    <div class="foot foot3">
+      <h5>Redes Sociales</h5>
+      <ul id="foo">
+        <li><a href="#"><img src="../Imagenes/facebook.png" alt="" style="width: 30px; height: 30px;"></a></li>
+        <li><a href="#"><img src="../Imagenes/gorjeo.png" alt="" style="width: 30px; height: 30px;" ></a></li>
+        <li><a href="#"><img src="../Imagenes/instagram.png" alt=""style="width: 35px; height: 35px;"></a></li>
+        <li><a href="#"><img src="../Imagenes/correo-electronico.png" alt=""style="width: 30px; height: 30px;"></a></li>
+        <!-- <li>&#169 2022</li> -->
+      </ul>
+
+      <address><i>
+        Derechos Reservados Tasty Food<br>
+        &#169.2022<br>
+        Catamarca - Argentina
+      </i></address>
+    </div>
+    
+  </footer>
+  <script src="../ArchivosJs/registration.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
